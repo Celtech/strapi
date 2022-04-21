@@ -1,0 +1,50 @@
+{
+  "index_name": "rykelabs",
+  "start_urls": [
+    "https://handbook.chargeover.test/"
+  ],
+  "sitemap_urls": [
+    "https://handbook.chargeover.test/sitemap.xml"
+  ],
+  "sitemap_alternate_links": true,
+  "stop_urls": [
+    "/tests"
+  ],
+  "selectors": {
+    "lvl0": {
+      "selector": "concat((//a[contains(@class,'navbar__link--active')]/text())[last()], substring(' > ', 1 div string-length((//ul[contains(@class,'menu__list')]//div[contains(@class, 'menu__list-item-collapsible')]//a[contains(@class, 'menu__link menu__link--active')]/text() | //ul[contains(@class,'menu__list')]//div[contains(@class, 'menu__list-item-collapsible')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--active')]/text())[last()])), (//ul[contains(@class,'menu__list')]//div[contains(@class, 'menu__list-item-collapsible')]//a[contains(@class, 'menu__link menu__link--active')]/text() | //ul[contains(@class,'menu__list')]//div[contains(@class, 'menu__list-item-collapsible')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--active')]/text())[last()])",
+      "type": "xpath",
+      "global": true,
+      "default_value": "Documentation"
+    },
+    "lvl1": "article div h1",
+    "lvl2": "article div h2",
+    "lvl3": "article div h3",
+    "lvl4": "article div h4",
+    "lvl5": "article div h5, article div td:first-child",
+    "lvl6": "article div h6",
+    "text": "article div p, article div li, article div td:last-child"
+  },
+  "strip_chars": " .,;:#",
+  "custom_settings": {
+    "separatorsToIndex": "_",
+    "attributesForFaceting": [
+      "language",
+      "version",
+      "type",
+      "docusaurus_tag"
+    ],
+    "attributesToRetrieve": [
+      "hierarchy",
+      "content",
+      "anchor",
+      "url",
+      "url_without_anchor",
+      "type"
+    ]
+  },
+  "conversation_id": [
+    "833762294"
+  ],
+  "nb_hits": 3493
+}

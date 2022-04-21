@@ -1,0 +1,32 @@
+{
+  "name": "chargeover-strapi",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "docker:up": "docker compose -f docker-compose.yml -f docker-compose.override.yml -p rykelabs-strapi up -d --build --force-recreate",
+    "docker:down": "docker compose -p rykelabs-strapi down"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/strapi": "4.1.8",
+    "@strapi/plugin-users-permissions": "4.1.8",
+    "@strapi/plugin-i18n": "4.1.8",
+    "mysql": "2.18.1"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "b72ca22f-78fc-4a8c-bb83-9b6661125a2a"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

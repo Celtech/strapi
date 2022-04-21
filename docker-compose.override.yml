@@ -1,0 +1,47 @@
+version: '3.8'
+services:
+  rykelabs-strapi-app:
+    container_name: rykelabs-strapi-app
+    build:
+      dockerfile: "./docker/Dockerfile"
+      context: .
+      target: node
+    command: ["yarn", "develop"]
+    ports:
+      - "1337:1337"
+    restart: always
+    volumes:
+      - './:/app/website'
+      - /app/website/node_modules
+    environment:
+      NODE_ENV: development
+      DATABASE_HOST: rykelabs-strapi-mariadb
+      DATABASE_SSL: "false"
+
+  rykelabs-strapi-mariadb:
+    image: mariadb:10.3.17
+    container_name: rykelabs-strapi-mariadb
+    expose:
+      - "3306"
+    networks:
+      - rykelabs-strapi-external
+    volumes:
+      - rykelabs-strapi-mariadb:/var/lib/mysql
+#      - ./docker/conf/mariadb/chargeover.cnf:/etc/mysql/my.cnf
+    environment:
+      TZ: "America/Chicago"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+      MYSQL_ROOT_PASSWORD: "password"
+      MYSQL_USER: 'dev'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_DATABASE: 'strapi'
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "--silent" ]
+
+networks:
+  rykelabs-strapi-external:
+    name: rykelabs-strapi-external
+    driver: bridge
+
+volumes:
+  rykelabs-strapi-mariadb:
