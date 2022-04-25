@@ -8,14 +8,15 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "docker:up": "docker compose -f docker-compose.yml -f docker-compose.override.yml -p rykelabs-strapi up -d --build --force-recreate",
+    "docker:up": "yarn build && docker compose -f docker-compose.yml -f docker-compose.override.yml -p rykelabs-strapi up -d --build --force-recreate",
     "docker:down": "docker compose -p rykelabs-strapi down"
   },
   "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.1.8",
-    "@strapi/plugin-users-permissions": "4.1.8",
+    "@chargeover/ckeditor5-strapi-plugin": "1.1.1",
     "@strapi/plugin-i18n": "4.1.8",
+    "@strapi/plugin-users-permissions": "4.1.8",
+    "@strapi/strapi": "4.1.8",
     "mysql": "2.18.1"
   },
   "author": {

@@ -1,5 +1,7 @@
 import MenuLogo from './extensions/images/logo.svg';
-import AuthLogo from './extensions/images/logo-wordmark.svg';
+import AuthLogo from './extensions/images/logo-wordmark.png';
+
+import './extensions/css/global.css'
 
 export default {
   config: {
@@ -17,6 +19,12 @@ export default {
         primary600: '#2c429b',
         primary700: '#23357c',
         danger700: '#b72b1a'
+      },
+    },
+    translations: {
+      en: {
+        "app.components.LeftMenu.navbrand.title": "Dashboard",
+        "app.components.LeftMenu.navbrand.workplace": "ChargeOver",
       },
     },
     locales: [],

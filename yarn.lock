@@ -974,6 +974,30 @@
   dependencies:
     "@ucast/mongo2js" "^1.3.0"
 
+"@chargeover/ckeditor5-markdown-build@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@chargeover/ckeditor5-markdown-build/-/ckeditor5-markdown-build-1.1.0.tgz#d24ab769044737c0b6f2901804b47d0ee9ea35e0"
+  integrity sha512-4c+OfBFj84lWG/w5xCKAuFrLtfsDfaX4oF80qPqL35MsPpwcBfI66vyHXDrT/xCJsogykmJaMY4MuODJLwfnZQ==
+
+"@chargeover/ckeditor5-strapi-plugin@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@chargeover/ckeditor5-strapi-plugin/-/ckeditor5-strapi-plugin-1.1.1.tgz#7c46ec0bd70e16b8429e304d7b86bb8922371cb7"
+  integrity sha512-rOzuejwI7AKsC2bahy/us8ZEMhiJve6MchEkt5lYku0oblFhqbcicQxYCoTaTIFm5oh9nWw1uniT8XJROhSsVw==
+  dependencies:
+    "@chargeover/ckeditor5-markdown-build" "^1.1.0"
+    "@ckeditor/ckeditor5-react" "^4.0.0"
+    "@strapi/design-system" "^0.0.1-alpha.70"
+    "@strapi/helper-plugin" "^4.1.5"
+    react "^17.0.2"
+    react-dom "^17.0.2"
+
+"@ckeditor/ckeditor5-react@^4.0.0":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-react/-/ckeditor5-react-4.0.1.tgz#fc09e21295f115b8806f4122f63c4073f06d2b82"
+  integrity sha512-5qKZn8EVBeEYzmDrgpq31dC2rqcJ341xKQmuj7JYzT9szsuIIzI4zOm3cf9IIglRXVWCuWvELJs8qmRNW19dzg==
+  dependencies:
+    prop-types "^15.7.2"
+
 "@colors/colors@1.5.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.5.0.tgz#bb504579c1cae923e6576a4f5da43d25f97bdbd9"
@@ -1509,7 +1533,7 @@
     lodash "4.17.21"
     umzug "2.3.0"
 
-"@strapi/design-system@0.0.1-alpha.79":
+"@strapi/design-system@0.0.1-alpha.79", "@strapi/design-system@^0.0.1-alpha.70":
   version "0.0.1-alpha.79"
   resolved "https://registry.yarnpkg.com/@strapi/design-system/-/design-system-0.0.1-alpha.79.tgz#23e6a7f73383b72148c926fa74ed0ba1acc32f0a"
   integrity sha512-o/F55Qjwao1HkqKcL8ovQ280QijJH8dLfzP+t3XMNL5Ihh3HBD2wcMS6dOsrnNDGdDE0LWQfG8bDbLPmWHmk1A==
@@ -1548,7 +1572,7 @@
     plop "2.7.6"
     pluralize "8.0.0"
 
-"@strapi/helper-plugin@4.1.8":
+"@strapi/helper-plugin@4.1.8", "@strapi/helper-plugin@^4.1.5":
   version "4.1.8"
   resolved "https://registry.yarnpkg.com/@strapi/helper-plugin/-/helper-plugin-4.1.8.tgz#75f20f369d5beac03699a397884e3bd1e00c7c03"
   integrity sha512-Jt5v7Z+1HeXHN2YhT7xchvbVx2CHbBjh4rxjQkTyTT7mv6zyKHGro3hwl8j92KG/KkGt9dnP+2aQonXOmWMaBA==

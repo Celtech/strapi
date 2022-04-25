@@ -1,63 +1,7 @@
 version: '3.8'
 services:
-  rykelabs-handbook-app:
-    image: ${RELEASE_IMAGE_NAME}
-    ports:
-      - "${CLUSTER_PORT}:8080"
-    deploy:
-      replicas: 1
-      update_config:
-        parallelism: 1
-        delay: 10s
-        order: start-first
-      restart_policy:
-        condition: on-failure
-        max_attempts: 3
-        window: 120s
-    environment:
-      SEARCH_API_KEY: $ALGOLIA_SEARCH_API_KEY
-      APPLICATION_ID: $ALGOLIA_APPLICATION_ID
+  null:
+    image: scratch
 
-  rykelabs-handbook-docsearch:
-    entrypoint: |
-      sh -c "while true; \
-        do echo 'Waiting 2 minutes before scraping'; \
-        sleep 120; \
-        pipenv run python -m src.index; \
-        echo 'Next scape in 1 hour, sleeping...'; \
-        sleep 3480;
-      done;"
-    deploy:
-      replicas: 1
-      update_config:
-        parallelism: 1
-        delay: 10s
-        order: start-first
-      restart_policy:
-        condition: any
-        max_attempts: 3
-        window: 120s
-        delay: 120s
-    environment:
-      CONFIG: /run/secrets/algolia-docsearch-config
-      APPLICATION_ID: /run/secrets/algolia-docsearch-application-id
-      API_KEY: /run/secrets/algolia-docsearch-api-key
-    secrets:
-      - algolia-docsearch-config
-      - algolia-docsearch-api-key
-      - algolia-docsearch-application-id
 
-networks:
-  rykelabs-handbook-external:
-    driver: overlay
-
-secrets:
-  algolia-docsearch-config:
-    name: algolia-docsearch-config-${CI_COMMIT_SHORT_SHA}
-    external: true
-  algolia-docsearch-api-key:
-    name: algolia-docsearch-api-key-${CI_COMMIT_SHORT_SHA}
-    external: true
-  algolia-docsearch-application-id:
-    name: algolia-docsearch-application-id-${CI_COMMIT_SHORT_SHA}
-    external: true
+    # Mount public folder as a volume for uploads

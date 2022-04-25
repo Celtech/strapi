@@ -1,0 +1,152 @@
+.ck .ck-content {
+  font-size: 1.125rem;
+  line-height: 1.7777778;
+}
+
+.ck .ck-content h1 {
+  font-size: 2em;
+  margin: 0 0 1.0666667em;
+  line-height: 1.3333333;
+  font-weight: 600;
+}
+
+.ck .ck-content h2 {
+  font-size: 1.6666667em;
+  margin: 0 0 1.0666667em;
+  line-height: 1.3333333;
+  font-weight: 600;
+}
+
+.ck .ck-content h3 {
+  font-size: 1.3333333em;
+  margin: 1.6666667em 0 0.6666667em;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.ck .ck-content h4 {
+  margin: 0 0 0.4444444em;
+  line-height: 1.5555556;
+  font-weight: 600;
+}
+
+.ck .ck-content p {
+  margin: 1.3333333em 0;
+}
+
+/* Lists */
+.ck .ck-content ul {
+  margin: 1.3333333em 0;
+  /*padding: 0 0 0 1.5555556em;*/
+}
+
+.ck .ck-content ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.ck .ck-content ul li {
+  padding-left: 0.4444444em;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.125rem;
+  line-height: 1.7777778;
+}
+
+.ck .ck-content ol {
+  margin: 1.3333333em 0;
+  /*padding: 0 0 0 1.5555556em;*/
+  list-style: decimal !important;
+}
+
+.ck .ck-content ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  /*padding: 0 0 0 1.5555556em;*/
+  list-style: upper-alpha !important;
+}
+
+.ck .ck-content ol ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  /*padding: 0 0 0 1.5555556em;*/
+  list-style: upper-roman !important;
+}
+
+.ck .ck-content ol li {
+  padding-left: 0.4444444em;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.125rem;
+  line-height: 1.7777778;
+}
+
+/* Images */
+.ck .ck-content img {
+  margin-top: 1.7777778em;
+  margin-bottom: 1.7777778em;
+
+  max-width: 100%;
+  height: auto;
+
+  display: block;
+  vertical-align: middle;
+}
+
+/* Tables */
+.ck .ck-content table {
+  font-size: .8888889em;
+  line-height: 1.5;
+
+  width: 100%;
+  table-layout: auto;
+  text-align: left;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+
+/* Code */
+.ck .ck-content pre {
+  font-size: .8888889em;
+  line-height: 1.75;
+  margin: 2em 0;
+  border-radius: 0.375rem;
+  padding: 1em 1.5em;
+
+  color: #e5e7eb;
+  background-color: #1f2937;
+  overflow-x: auto;
+  font-weight: 400;
+}
+
+.ck .ck-content pre::after {
+  background: #e5e7eb !important;
+  color: #1f2937 !important;
+  border-radius: 0 0 10% 10%;
+}
+
+.ck .ck-content pre code {
+  font-size: .8888889em;
+
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  font-weight: inherit;
+  color: inherit;
+  font-family: inherit;
+  line-height: inherit;
+
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
+}
+
+.ck .ck-content code {
+  color: #e5e7eb;
+  background: #1f2937;
+}
